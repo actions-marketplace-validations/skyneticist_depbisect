@@ -63,7 +63,7 @@ CMD ["help"]
 # projects with pip (the base image ships python3 and a pip recent enough for
 # the --python redirection DepBisect uses). uv is told to use the bundled
 # interpreter rather than downloading a managed one at run time.
-FROM python:3.14-slim AS python
+FROM python:3.15-slim AS python
 ENV UV_PYTHON_PREFERENCE=only-system
 RUN apt-get update \
  && apt-get upgrade -y \
